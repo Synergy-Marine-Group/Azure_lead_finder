@@ -1,0 +1,23 @@
+[project]
+name = "find_owners"
+version = "0.1.0"
+description = "find_owners using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]==0.105.0",
+]
+
+[project.scripts]
+find_owners = "find_owners.main:run"
+run_crew = "find_owners.main:run"
+train = "find_owners.main:train"
+replay = "find_owners.main:replay"
+test = "find_owners.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
